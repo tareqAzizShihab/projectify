@@ -86,7 +86,7 @@ export default function Project({ taskList, bgColor, title }) {
         ) : (
           <div>
             <p className="text-center my-3 text-xl font-medium">
-              No Task Found
+              Task List is empty!
             </p>
           </div>
         )}
