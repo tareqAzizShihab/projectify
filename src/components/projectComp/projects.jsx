@@ -7,16 +7,18 @@ import {
 import Project from "./project.jsx";
 
 export default function Projects() {
-  const { searchItem } = useContext(SearchContext);
   let { tasks } = useContext(TasksReducerContext);
+  const { searchItem } = useContext(SearchContext);
   const taskList = searchItem ? searchItem : tasks;
 
-  const todoTask = taskList.filter((task) => task.category === "todo");
-  const onProgressTask = taskList.filter(
-    (task) => task.category === "onProgress"
-  );
-  const doneTask = taskList.filter((task) => task.category === "done");
-  const revisedTask = taskList.filter((task) => task.category === "revised");
+  function taskFilter(type) {
+    return taskList.filter((task) => task.category === type);
+  }
+
+  const todoTask = taskFilter("todo");
+  const onProgressTask = taskFilter("onProgress");
+  const doneTask = taskFilter("done");
+  const revisedTask = taskFilter("revised");
   const { isEdit } = useContext(FormModelContext);
 
   return (

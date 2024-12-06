@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import Task from "./task";
+import Task from "./task.jsx";
 
 export default function Project({ taskList, bgColor, title }) {
   const [tasks, setTasks] = useState(taskList);
