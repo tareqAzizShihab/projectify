@@ -10,47 +10,47 @@ import Projects from "./projectComp/projects.jsx";
 import TaskForm from "./taskForm.jsx";
 import Topbar from "./topComp/topbar.jsx";
 
-const initialTasks = [
-  {
-    id: crypto.randomUUID(),
-    taskName: "Task one",
-    description: "Hello! i am Task One.",
-    dueDate: "12/12/2024",
-    category: "todo",
-  },
-  {
-    id: crypto.randomUUID(),
-    taskName: "Task onemptied",
-    description: "Hello! i am Task Two.",
-    dueDate: "10/12/2024",
-    category: "todo",
-  },
-  {
-    id: crypto.randomUUID(),
-    taskName: "Task Three",
-    description: "Hello! i am Task Three.",
-    dueDate: "12/12/2024",
-    category: "onProgress",
-  },
-  {
-    id: crypto.randomUUID(),
-    taskName: "Task Four",
-    description: "Hello! i am Task Four.",
-    dueDate: "12/12/2024",
-    category: "done",
-  },
-  {
-    id: crypto.randomUUID(),
-    taskName: "Task Two",
-    description: "Hello! i am Task Two.",
-    dueDate: "12/12/2024",
-    category: "revised",
-  },
-];
+// const initialTasks = [
+//   {
+//     id: crypto.randomUUID(),
+//     taskName: "Task one",
+//     description: "Hello! i am Task One.",
+//     dueDate: "12/12/2024",
+//     category: "todo",
+//   },
+//   {
+//     id: crypto.randomUUID(),
+//     taskName: "Task onemptied",
+//     description: "Hello! i am Task Two.",
+//     dueDate: "10/12/2024",
+//     category: "todo",
+//   },
+//   {
+//     id: crypto.randomUUID(),
+//     taskName: "Task Three",
+//     description: "Hello! i am Task Three.",
+//     dueDate: "12/12/2024",
+//     category: "onProgress",
+//   },
+//   {
+//     id: crypto.randomUUID(),
+//     taskName: "Task Four",
+//     description: "Hello! i am Task Four.",
+//     dueDate: "12/12/2024",
+//     category: "done",
+//   },
+//   {
+//     id: crypto.randomUUID(),
+//     taskName: "Task Two",
+//     description: "Hello! i am Task Two.",
+//     dueDate: "12/12/2024",
+//     category: "revised",
+//   },
+// ];
 
 export default function MainSec() {
   const [isEdit, setIsEdit] = useState(null);
-  const [tasks, dispatch] = useReducer(taskReducer, initialTasks);
+  const [tasks, dispatch] = useReducer(taskReducer, []);
   const [searchItem, setSearchItem] = useState(null);
 
   return (
